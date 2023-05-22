@@ -144,6 +144,10 @@
   <ItemGroup>
     <ClCompile Include="cheat.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="modules\sprint\sprint.cpp" />
+    <ClCompile Include="net\minecraft\client\minecraft.cpp" />
+    <ClCompile Include="net\minecraft\entity\entity.cpp" />
+    <ClCompile Include="net\minecraft\world\world.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cheat.h" />
@@ -156,6 +160,10 @@
     <ClInclude Include="JNI\jni_md.h" />
     <ClInclude Include="JNI\jvmti.h" />
     <ClInclude Include="JNI\jvmticmlr.h" />
+    <ClInclude Include="modules\sprint\sprint.h" />
+    <ClInclude Include="net\minecraft\client\minecraft.h" />
+    <ClInclude Include="net\minecraft\entity\entity.h" />
+    <ClInclude Include="net\minecraft\world\world.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
