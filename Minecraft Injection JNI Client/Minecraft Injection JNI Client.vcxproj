@@ -130,8 +130,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;MINECRAFTINJECTIONJNICLIENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -145,6 +146,7 @@
     <ClCompile Include="cheat.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="modules\sprint\sprint.cpp" />
+    <ClCompile Include="modules\velocity\velocity.cpp" />
     <ClCompile Include="net\minecraft\client\minecraft.cpp" />
     <ClCompile Include="net\minecraft\entity\entity.cpp" />
     <ClCompile Include="net\minecraft\world\world.cpp" />
@@ -161,6 +163,7 @@
     <ClInclude Include="JNI\jvmti.h" />
     <ClInclude Include="JNI\jvmticmlr.h" />
     <ClInclude Include="modules\sprint\sprint.h" />
+    <ClInclude Include="modules\velocity\velocity.h" />
     <ClInclude Include="net\minecraft\client\minecraft.h" />
     <ClInclude Include="net\minecraft\entity\entity.h" />
     <ClInclude Include="net\minecraft\world\world.h" />

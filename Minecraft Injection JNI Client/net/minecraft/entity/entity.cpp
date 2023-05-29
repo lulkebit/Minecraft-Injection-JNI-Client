@@ -8,6 +8,12 @@ jfieldID getPlayerField = NULL;
 
 jmethodID setSprintingMethod = NULL;
 
+jfieldID motionX = NULL;
+jfieldID motionY = NULL;
+jfieldID motionZ = NULL;
+
+jfieldID hurttime = NULL;
+
 jclass C_Entity::getClass()
 {
 	if (playerClass == NULL)
@@ -33,4 +39,51 @@ void C_Entity::setSprinting(bool state)
 		setSprintingMethod = ct.env->GetMethodID(getClass(), "d", "(Z)V");
 
 	ct.env->CallBooleanMethod(getInstance(), setSprintingMethod, state);
+}
+
+jdouble C_Entity::getMotionX()
+{
+	if (motionX == NULL)
+		motionX = ct.env->GetFieldID(getClass(), "v", "D");
+
+	return ct.env->GetDoubleField(getInstance(), motionX);
+}
+
+jdouble C_Entity::getMotionY()
+{
+	if (motionY == NULL)
+		motionY = ct.env->GetFieldID(getClass(), "w", "D");
+
+	return ct.env->GetDoubleField(getInstance(), motionY);
+}
+
+jdouble C_Entity::getMotionZ()
+{
+	if (motionZ == NULL)
+		motionZ = ct.env->GetFieldID(getClass(), "x", "D");
+
+	return ct.env->GetDoubleField(getInstance(), motionZ);
+}
+
+void C_Entity::setMotionX(jdouble value)
+{
+	ct.env->SetDoubleField(getInstance(), motionX, value);
+}
+
+void C_Entity::setMotionY(jdouble value)
+{
+	ct.env->SetDoubleField(getInstance(), motionY, value);
+}
+
+void C_Entity::setMotionZ(jdouble value)
+{
+	ct.env->SetDoubleField(getInstance(), motionZ, value);
+}
+
+int C_Entity::getHurttime()
+{
+	if (hurttime == NULL)
+		hurttime = ct.env->GetFieldID(getClass(), "Z", "I");
+
+	return ct.env->GetIntField(getInstance(), hurttime);
 }

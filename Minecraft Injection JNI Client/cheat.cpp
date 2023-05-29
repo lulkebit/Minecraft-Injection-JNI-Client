@@ -18,6 +18,7 @@ void runModules()
 		if (!C_Entity::getInstance()) continue;
 
 		Sprint::runModule();
+		Velocity::runModule();
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(5));
 	}

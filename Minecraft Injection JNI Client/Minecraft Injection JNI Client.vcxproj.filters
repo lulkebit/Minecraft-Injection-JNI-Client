@@ -33,6 +33,9 @@
     <ClCompile Include="modules\sprint\sprint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="modules\velocity\velocity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JNI\classfile_constants.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="modules\sprint\sprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\velocity\velocity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
